@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Image Menu</title>
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" type="text/css">
+<style class="cp-pen-styles">
+body {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Roboto";
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: #e74c3c;
+  /* IE Fallback */
+  background: rgba(67, 74, 84, 0.8);
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  width:500px;
+  margin: 30px auto;
+}
+
+nav ul {
+  background: #2ecc71;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  position: relative;
+  display: inline-block;
+  margin-right: -4px;
+  text-align: center;
+}
+
+nav ul li:first-child a {
+  background: #27ae60;
+  width: 49px;
+  padding: 15px 0;
+}
+
+nav ul li:last-child { margin: 0; }
+
+nav ul li a {
+  display: block;
+  background: #2ecc71;
+  padding: 15px 20px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.2s linear;
+}
+
+nav ul li a:hover { background: #27ae60; }
+
+nav ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 117px;
+  border-bottom: 4px solid #2ecc71;
+}
+
+nav ul li ul li {
+  display: block;
+  width: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+nav ul li ul li a {
+  display: block;
+  background: #2c3e50;
+  padding: 10px 15px;
+}
+
+nav ul li ul li a:first-child {
+  background: #2c3e50;
+  width: auto;
+  border-left: 4px solid transparent;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+nav ul li ul li a:hover {
+  background: #34495e;
+  border-left: 4px solid #2ecc71;
+}
+</style>
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="jquery-script-menu" style="background-color: black">
+    <!--<div class="jquery-script-center" style="background-color: blue">-->
+
+    <!--<div class="jquery-script-ads" style="background-color: red">-->
+<!--<script type="text/javascript">
+
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//
+</script>-->
+<h1 style="text-align: center;font-size: 40px;color: #1ccfff" >Mobile Sutra</h1>
+<!--<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>-->
+<!--</div>-->
+<div class="jquery-script-clear"  style="background-color: red" ></div>
+<!--</div>-->
+</div>
+<h1 align="center" style="margin-top:150px; color:#1ccfff;">Image Menu</h1>
+<nav class='animated flipInX' style="background-color: pink">
+  <ul style="width: 654px" >
+    <li> <a href='#'>
+            <div class='fa fa-home' style="background-color: blue"></div>
+      </a> </li>
+    <li> <a href='#'> About </a> </li>
+    <li class='sub-menu'> <a href='#'> Car Images <i class='fa fa-angle-down'></i> </a>
+      <ul style="display: none;visibility: visible">
+        
+          <li> <a class="img" data-img="car1.jpg" href='#'> car1 </a> </li>
+        <li> <a class="img" data-img="car3.jpg" href='#'> car2 </a> </li>
+        
+      </ul>
+    </li>
+    <li class='sub-menu'> <a href='#'> Hotels <i class='fa fa-angle-down'></i> </a>
+      <ul style="display: none;visibility: visible">
+        <li> <a class="img" data-img="img1.jpg" href='#'> hotel1 </a> </li>
+        <li> <a class="img" data-img="img2.jpg" href='#'> hotel2</a> </li>
+        <li> <a class="img" data-img="img3.jpg" href='#'> hotel3 </a> </li>
+      </ul>
+    </li>
+        <li class='sub-menu'> <a href='#'> Bike Images <i class='fa fa-angle-down'></i> </a>
+      <ul style="display: none;visibility: visible">
+        <li> <a class="img" data-img="bike1.jpg"  href='#'> bike1 </a> </li>
+        <li> <a class="img" data-img="bike2.jpg" href='#'> bike2 </a> </li>
+        <li> <a class="img" data-img="bike3.jpg" href='#'> bike3 </a> </li>
+      </ul>
+    </li>
+    <li> <a href='#'> Contact Us </a> </li>
+  </ul>
+</nav>
+    
+        <div  data-role="content" data-theme="a" style= "height:100px; width: 200px; background:url('') center center no-repeat">  
+            <img id="img-container"  style="height:400px; width: 1341px  " />
+        </div>
+
+    
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script>
+$('.sub-menu ul').hide();
+$(".sub-menu a").click(function () {
+  $(this).parent(".sub-menu").children("ul").slideToggle("500");
+  $(this).find("i.fa").toggleClass("fa-angle-up fa-angle-up");
+});
+
+$(document).ready(function(){
+    
+   $(".img").click(function(){
+       $("#img-container").attr("src",$(this).attr("data-img"));
+   }); 
+});
+
+</script>
+</body>
+</html>
